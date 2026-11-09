@@ -1,3 +1,4 @@
+import Image from "next/image";
 import TypedIntro from "./typed-intro";
 
 export default function HeroSection() {
@@ -23,9 +24,15 @@ export default function HeroSection() {
 
         <div className="portrait-wrap" aria-label="Espaço reservado para foto de Caio Araujo">
           <div className="portrait-frame">
-            <div className="portrait-placeholder">
-              <div className="portrait-monogram">CA</div>
-              <span className="portrait-label">sua foto aqui</span>
+            <div className="portrait-image-wrap">
+              <Image
+                src="/caio_araujo.png"
+                alt="Foto de Caio Araujo"
+                fill
+                sizes="(max-width: 760px) 68vw, 440px"
+                className="portrait-image"
+                priority
+              />
             </div>
             <span className="portrait-corner corner-top" />
             <span className="portrait-corner corner-bottom" />
